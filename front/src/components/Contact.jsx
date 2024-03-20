@@ -33,7 +33,7 @@ const Contact = () => {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      if (data.success)
+      if (data?.success) {
         toast.success(data?.message, {
           position: "top-center",
           autoClose: 3000,
@@ -44,8 +44,7 @@ const Contact = () => {
           progress: undefined,
           theme: "light",
         });
-      else {
-        console.log(data);
+      } else {
         toast.error(data.message, {
           position: "top-center",
           autoClose: 3000,
@@ -60,7 +59,18 @@ const Contact = () => {
       setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      const data = error;
+      console.log(data.message);
+      toast.error("errro", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        theme: "light",
+      });
     }
   };
   return (
