@@ -25,7 +25,7 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/contact/", {
+      const res = await fetch(`${import.meta.env.BACKEND}/api/contact/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -5,7 +5,11 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   server: {
     proxy: {
-      "/api": "https://portfolio-xagb.onrender.com/",
+      "/api": {
+        target: "https://portfolio-xagb.onrender.com/",
+        secure: true,
+        changeOrigin: true,
+      },
     },
   },
   plugins: [react()],
