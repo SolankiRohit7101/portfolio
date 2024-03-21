@@ -25,13 +25,16 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch(`${import.meta.env.BACKEND}/api/contact/`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const res = await fetch(
+        "https://portfolio-xagb.onrender.com/api/contact/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const data = await res.json();
       if (data?.success) {
         toast.success(data?.message, {
@@ -60,7 +63,7 @@ const Contact = () => {
     } catch (error) {
       setLoading(false);
       const data = error;
-      console.log(data.message);
+      console.log(data?.message);
       toast.error("errro", {
         position: "top-center",
         autoClose: 3000,

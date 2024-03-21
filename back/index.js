@@ -10,7 +10,11 @@ import sendmail from "./utils/Nodemailer.js";
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+app.use(
+  cors({
+    // origin: "https://portfolio-two-umber-97.vercel.app/",
+  })
+);
 
 mongoose
   .connect(process.env.MONGODBURL)
