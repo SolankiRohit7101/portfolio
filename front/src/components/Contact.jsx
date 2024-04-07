@@ -90,7 +90,7 @@ const Contact = () => {
         theme="light"
       />
 
-      <div className="w-full py-5  text-white">
+      <div className="w-full py-5 min-h-[80vh] text-white">
         <div className=" mx-2 md:mx-20 pt-5 md:pt-10 ">
           <h1 className="text-gray-600 text-nowrap text-center md:text-left text-3xl">
             Contact Me
