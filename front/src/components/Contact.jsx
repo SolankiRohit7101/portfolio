@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from "react-router-dom";
 const Contact = () => {
   const [formData, setFormData] = useState({
     email: "",
@@ -9,9 +10,8 @@ const Contact = () => {
     message: "",
   });
 
-  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
-
+  const navigate = useNavigate();
   const handleInput = (e) => {
     const name = e.target.id;
     const value = e.target.value;
@@ -60,6 +60,7 @@ const Contact = () => {
         });
       }
       setLoading(false);
+      navigate("/");
     } catch (error) {
       setLoading(false);
       const data = error;
@@ -90,7 +91,7 @@ const Contact = () => {
         theme="light"
       />
 
-      <div className="w-full py-5 min-h-[80vh] text-white">
+      <div className="w-full py-5 h-[85vh] md:min-h-[80vh] text-white">
         <div className=" mx-2 md:mx-20 pt-5 md:pt-10 ">
           <h1 className="text-gray-600 text-nowrap text-center md:text-left text-3xl">
             Contact Me
