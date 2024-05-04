@@ -4,7 +4,7 @@ import me from "../assets/me.jpg";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full h-[84vh]  text-white  bg-[#343353] ">
+    <div className="w-full min-h-[84vh] text-white  bg-[#343353] ">
       <div className="mx-2 md:mx-20 py-12  ">
         <div className="flex justify-center items-center flex-col space-y-4">
           <div className="w-32 h-32 md:w-36 md:h-36  ">
