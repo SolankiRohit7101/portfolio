@@ -64,7 +64,7 @@ const About = () => {
               <div className="text-sm  text-slate-500  px-4">
                 <div className="py-2">
                   <div className="flex justify-between">
-                    <p>React js</p>
+                    <p>Node js</p>
                     <p>70%</p>
                   </div>
                   <div className="relative w-md  h-2 w-[100%] mx-auto rounded-3xl bg-gray-300">
@@ -82,7 +82,7 @@ const About = () => {
                 </div>
                 <div className="py-2">
                   <div className="flex justify-between">
-                    <p>Tailwind CSS</p>
+                    <p>Express js</p>
                     <p>85%</p>
                   </div>
                   <div className="relative w-md  h-2 w-[100%] mx-auto rounded-3xl bg-gray-300">
