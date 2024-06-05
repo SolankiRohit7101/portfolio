@@ -37,7 +37,7 @@ app.post("/api/contact", async (req, res, next) => {
       await contact.save();
 
       sendmail(email, name, subject);
-      sendmail("solankirohit7101@gmail.com", "me", "someone contacted.);
+      sendmail("solankirohit7101@gmail.com", "me", "someone contacted.");
       return res
         .json({
           success: true,
